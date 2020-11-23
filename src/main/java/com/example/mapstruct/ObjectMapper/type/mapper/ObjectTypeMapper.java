@@ -22,7 +22,8 @@ public interface ObjectTypeMapper {
     @Mappings({
             @Mapping(source = "productId", target = "productDtoId"),
             // 嵌套类型转换
-            @Mapping(source = "productDetail.productDetail", target = "productDTODetail.productDtoDetail")
+            @Mapping(source = "productDetail.productDetail", target = "productDTODetail.productDtoDetail"),
+            @Mapping(source = "productDetail.productDetailId", target = "productDTODetail.productDTODetailId")
 //            @Mapping(source = "productDetail", target = "productDTODetail")
     })
     ProductDTO toDto(Product product);

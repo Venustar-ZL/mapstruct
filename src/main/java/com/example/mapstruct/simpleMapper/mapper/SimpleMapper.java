@@ -14,7 +14,7 @@ import org.mapstruct.factory.Mappers;
  * @Author: ZhangLei
  * @Version: 1.0
  **/
-@Mapper
+@Mapper(componentModel = "spring")
 public interface SimpleMapper {
 
     SimpleMapper INSTANCE = Mappers.getMapper(SimpleMapper.class);

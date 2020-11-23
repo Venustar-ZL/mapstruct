@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProductDetail {
 
+    private String productDetailId;
+
     private String productDetail;
 
 }

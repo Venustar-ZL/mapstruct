@@ -24,7 +24,7 @@ public class ObjectTypeMapperTest {
 
     @BeforeEach
     void init() {
-        productDetail = new ProductDetail("product-detail");
+        productDetail = new ProductDetail("1", "product-detail");
         product = new Product("123", productDetail);
     }
 

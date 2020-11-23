@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProductDTODetail {
 
+    private Long productDTODetailId;
+
     private String productDtoDetail;
 
 }
