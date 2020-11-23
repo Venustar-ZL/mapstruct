@@ -14,14 +14,14 @@ import org.mapstruct.factory.Mappers;
  * @Author: ZhangLei
  * @Version: 1.0
  **/
-@Mapper(componentModel = "spring")
+@Mapper
 public interface SimpleMapper {
 
     SimpleMapper INSTANCE = Mappers.getMapper(SimpleMapper.class);
 
     /**
      * 对于同名同属性的字段，无需特别声明指定，自动转换。
-     * 对于不同名相同属性的字段，可以使用Mapping注解指定。
+     * 对于不同名相同属性的字段，可以使用@Mapping注解指定。
      * @param product
      * @return
      */

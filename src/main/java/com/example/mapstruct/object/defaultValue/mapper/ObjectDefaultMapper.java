@@ -22,7 +22,7 @@ public interface ObjectDefaultMapper {
 
     @Mappings({
             @Mapping(target = "productId", source = "productId", defaultValue = "123"), //当product的productId为null，设置为0
-            @Mapping(target = "random", source = "random", defaultValue = "java(UuidUtils.getUuid())"), //缺省设置随机数
+            @Mapping(target = "random", source = "random", defaultExpression = "java(UuidUtils.getUuid())"), //缺省设置随机数
             @Mapping(target = "stock", constant = "100"), //固定设置为0, 常量
             @Mapping(target = "createTime", dateFormat = "yyyy-MM-dd", constant = "2020-01-01") //固定格式化设置为2020-01-01，
     })

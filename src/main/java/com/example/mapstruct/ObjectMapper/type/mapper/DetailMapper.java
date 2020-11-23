@@ -13,10 +13,10 @@ import org.mapstruct.factory.Mappers;
  * @Author: ZhangLei
  * @Version: 1.0
  **/
-@Mapper(componentModel = "spring")
+@Mapper
 public interface DetailMapper {
 
-//    DetailMapper INSTANCE = Mappers.getMapper(DetailMapper.class);
+    DetailMapper INSTANCE = Mappers.getMapper(DetailMapper.class);
 
     @Mapping(source = "productDetail", target = "productDtoDetail")
     ProductDTODetail toDetail(ProductDetail productDetail);

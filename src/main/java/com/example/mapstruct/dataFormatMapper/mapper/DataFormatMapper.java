@@ -28,9 +28,17 @@ public interface DataFormatMapper {
     @Mappings({
             @Mapping(source = "price", target = "price", numberFormat = "#.00元"),
             @Mapping(source = "stock", target = "stock", numberFormat = "#个"),
+            @Mapping(target = "saleTime", dateFormat = "yyyy-MM-dd HH:mm:00"),
+            @Mapping(target = "validTime", dateFormat = "yyyy-MM-dd HH:mm")
+    })
+    ProductDTO toDto(Product product);
+
+    @Mappings({
+            @Mapping(source = "price", target = "price", numberFormat = "#.00元"),
+            @Mapping(source = "stock", target = "stock", numberFormat = "#个"),
             @Mapping(target = "saleTime", dateFormat = "yyyy-MM-dd HH:mm:ss"),
             @Mapping(target = "validTime", dateFormat = "yyyy-MM-dd HH:mm")
     })
-    ProductDTO toDto(Product product);;
+    Product toDo(ProductDTO productDTO);
 
 }

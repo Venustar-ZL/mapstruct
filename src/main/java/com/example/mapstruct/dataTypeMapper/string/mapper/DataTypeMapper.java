@@ -12,7 +12,7 @@ import org.mapstruct.factory.Mappers;
  * @Author: ZhangLei
  * @Version: 1.0
  **/
-@Mapper(componentModel = "spring")
+@Mapper
 public interface DataTypeMapper {
 
     DataTypeMapper INSTANCE = Mappers.getMapper(DataTypeMapper.class);
